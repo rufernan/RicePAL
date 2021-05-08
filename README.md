@@ -20,7 +20,7 @@ This repo contains the codes for the RS paper: [Rice-Yield Prediction with Multi
 
 ```
 @article{fernandez2021rice,
-  title={Rice-Yield Prediction with Multi-Temporal Sentinel-2 Data and 3D CNN: A Case Study in Nepal},
+  title={{Rice-Yield Prediction with Multi-Temporal Sentinel-2 Data and 3D CNN: A Case Study in Nepal}},
   author={Fernandez-Beltran, Ruben and Baidar, Tina and Kang, Jian and Pla, Filiberto},
   journal={Remote Sensing},
   volume={13},
