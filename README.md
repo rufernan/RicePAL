@@ -11,9 +11,9 @@ This repo contains the codes for the RS paper: [Rice-Yield Prediction with Multi
 
 ## Usage
 
-`./codes/x.m` is the .
+`./codes/create_model_regression.m` is the code of the proposed 3D-CNN.
 
-`./codes/y.m` is the training script for .
+`./codes/RUN_3dcnn.m` is the main script.
 
 ## Citation
 
