@@ -1,0 +1,35 @@
+
+*****************************
+ ** FOLDERS DESCRIPTION **
+*****************************
+
+  -------------------------------
+  - Sentinel-2 products -
+  -------------------------------
+    
+    -- 3 years (FOLDERS: '2016', '2017', '2018')
+    
+    ---- 3 months (SUB-FOLDERS: '01jul', '02sep', '03nov')
+    
+    ------ 14 Sentinel-2 image tiles covering the area of Nepal
+    ------ each image is a GeoTIFF with a 20m spatial resolution and 12 bands
+    ------ bands from 1-11 are all the S2 bands except B01, B09, B10 (60m bands used for atmospheric correction) <-- values in uint16 'with S2 bias' and 'nan' in irrelevant areas
+    ------ band 12 is the corresponding NDVI map <-- values [-1,1] and 'nan' in irrelevant areas
+    
+        
+  -------------------------------------
+  - Ground-Truth rice maps -
+  -------------------------------------
+
+    -- FOLDER: 'gt_rice'
+    ---- 14 rice mask (one for each Sentinel-2 tile covering the area of Nepal)
+    ---- label values: no_rice (0), rice (1), irrelevant_area (255)
+  
+    - With Python/Matlab I have some problems on the accuracy of the projections (with SNAP it seem to be solved when generating a rice mask for each S2 tile).
+
+    ** SNAP process for generating a ricemask (20m) for each Sentinel-2 tile ** 
+
+      - Open 'ricemask_20m_ALL.tif' with the complete rice map of nepal
+      - Open the corresponding S2 product
+      - Project the complete rice map onto the S2 product: Raster>Geometric Operations>Reprojection (use CRS of the S2 product)
+      - Export the new generated prodct as GeoTIFF: File>Export>GeoTIFF
